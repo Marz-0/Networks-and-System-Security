@@ -1,8 +1,11 @@
 # network_monitor.py
+import os
 import csv
 from collections import defaultdict
 
-LOG_FILE = "connections.csv"
+# Get the directory where this script is located
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+LOG_FILE = os.path.join(SCRIPT_DIR, "connections.csv")
 THRESHOLD = 10  # alert if a host makes more than this many connections
 
 def analyse_connections():

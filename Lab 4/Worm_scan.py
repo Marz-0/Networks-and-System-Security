@@ -1,4 +1,4 @@
-# worm_simulation.py
+# worm_scan.py
 import random
 
 NUM_HOSTS = 20

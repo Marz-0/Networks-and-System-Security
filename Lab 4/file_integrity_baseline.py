@@ -4,8 +4,10 @@ import hashlib
 import csv
 from datetime import datetime
 
-FOLDER_TO_MONITOR = "Files"   
-BASELINE_FILE = "baseline.csv"
+# Get the directory where this script is located
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+FOLDER_TO_MONITOR = os.path.join(SCRIPT_DIR, "Files")
+BASELINE_FILE = os.path.join(SCRIPT_DIR, "baseline.csv")
 
 def hash_file(path):
     """Return SHA-256 hex digest of a file."""

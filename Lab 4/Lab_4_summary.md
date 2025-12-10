@@ -1,18 +1,79 @@
 # Week 4 Practical Summary  
+## Malware, Integrity Monitoring & Network Anomaly Detection
+
+In this practical session, I implemented a set of defensive security tools designed to simulate how real-world systems detect, analyse, and respond to malicious software. The workshop focussed on four core areas: file integrity monitoring, signature-based malware detection, worm propagation modelling, and network anomaly detection. Together, these exercises provided a hands-on understanding of how security mechanisms identify unusual behaviour and protect systems from compromise.
 
 
-## Malware, Integrity & Network Monitoring
 
-In this week’s practical, I explored core defensive techniques used to detect and analyse malicious software. I first implemented a simple File Integrity Monitoring (FIM) system. 
+## 1. File Integrity Monitoring (FIM)
 
-The first script generated a SHA-256 hash for every file in a monitored directory ("Files" folder) and saved the results into a baseline.csv file. This establishes a trusted reference point. The script file_integrity_baseline.py walks through the folder. It hashes each file and records its timestamp, simulating how host based intrusion detection systems create clean system baselines.
+The first task involved creating a **baseline of trusted file hashes**. Using SHA‑256, I generated a cryptographic fingerprint for every file inside the monitored *Files/* directory.  
+The script `file_integrity_baseline.py` walks through each file, hashes it, and records the results in **baseline.csv**, including timestamps for traceability. This mirrors how host‑based intrusion detection systems maintain a database of “clean” system states.
 
-After generating the baseline, I used file_integrity_check.py to detect suspicious changes. The script recomputes each file’s hash and compares it to the baseline to identify new, modified, or missing files. This demonstrates how integrity checking can reveal tampering caused by malware.
+Next, I used `file_integrity_check.py` to compare the current state of the folder with the baseline. The script re‑hashes all files and identifies whether each one is:
 
-Next, I implemented a simple signature-based malware scanner. The script malware_detect.py (signature_scan) scans files for known malicious patterns such as eval or socket.connect, representing static detection techniques. This acts like an antivirus feature. Any matching pattern produces a warning, showing how signature rules can help identify suspicious scripts.
+- **[OK]** – unchanged  
+- **[MODIFIED]** – hash mismatch  
+- **[NEW]** – not present in the baseline  
+- **[MISSING]** – removed since the baseline  
 
-To understand malware propagation, I created a worm simulation using Worm_scan.py. This script randomly selects hosts and attempts to infect them with a set probability, printing the spread at each step. It then models how scanning worms propagate across a network, and how infection speed depends on factors like probability and the number of hosts contacted.
+This demonstrates how integrity monitoring can detect unauthorised modification—one of the key behavioural signs of malware attempting to tamper with files or embed itself into a system.
 
-Finally, I developed a basic network monitoring tool using Network_monitor.py. This program analyses a CSV log of outbound connections and raises alerts if any device exceeds a certain number of connections. This could indicate worm like behaviour or scanning activity. This shows how network level anomaly detection can complement host based monitoring by looking for unusual communication patterns.
 
-Overall, this practical strengthened my understanding of malware behaviour and defensive techniques. I gained hands on experience with integrity checking, signature detection, simulated malware propagation, and basic network anomaly monitoring core elements of modern cybersecurity defence strategies.
+
+## 2. Signature‑Based Malware Scanning
+
+To explore classic antivirus techniques, I built a simple signature scanner using `signature_scan.py`.  
+The program:
+
+- Reads every file in the monitored directory  
+- Searches for suspicious patterns such as:
+  - `eval(`  
+  - `base64.b64decode`  
+  - `socket.connect`  
+  - `exec(`  
+  - `import os`  
+- Flags any file that contains these indicators
+
+Although signature‑based detection is limited—especially against polymorphic or obfuscated malware—it remains useful for identifying basic malicious behaviours. This exercise shows how early antivirus engines worked and why modern systems rely on more sophisticated behavioural analysis.
+
+
+
+## 3. Worm Propagation Simulation
+
+Using `worm_scan.py`, I modelled how a network worm spreads across a set of simulated hosts.  
+The script:
+
+- Starts with a single infected host  
+- Makes several infection attempts per step  
+- Infects new hosts based on probability  
+- Displays the infection curve across iterations  
+
+This reflects how scanning worms (like Code Red or SQL Slammer) spread rapidly by randomly probing hosts for vulnerabilities. By adjusting variables such as infection probability or number of attempts, I was able to see how small changes dramatically influence outbreak severity.
+
+
+
+## 4. Network Monitoring & Anomaly Detection
+
+To complement host‑based defences, I implemented a lightweight network monitoring tool in `Network_monitor.py`.  
+This program:
+
+- Reads **connections.csv**, a log of outbound connections  
+- Counts the number of connections per source IP  
+- Raises an alert if any device exceeds a defined threshold  
+
+Excessive outbound connections can signal worm activity, port scanning, or command‑and‑control beaconing. This exercise highlights how network‑level anomaly detection can reveal malicious behaviour that file-based monitoring alone might miss.
+
+
+
+## Reflection
+
+This practical consolidated key defensive strategies used in cybersecurity:
+
+- **Integrity checking** revealed how cryptographic baselines detect tampering.  
+- **Signature scanning** illustrated the foundations (and limitations) of classic antivirus design.  
+- **Worm simulation** provided insight into malware propagation and why rapid detection is critical.  
+- **Network anomaly detection** demonstrated how unusual connection patterns can indicate an attack in progress.
+
+Together, these tasks gave me a deeper understanding of how malware behaves and how layered detection mechanisms—host-based, network-based, and signature-based—work together to protect systems.
+
