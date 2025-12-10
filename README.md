@@ -10,11 +10,11 @@
 ## Overview
 This portfolio showcases my practical work across the Networks and Systems Security module. Each week includes:
 
-- ✔️ Completed lab tasks  
-- ✔️ Python scripts and outputs  
-- ✔️ Technical explanations  
-- ✔️ Reflections connecting the work to cybersecurity principles  
-- ✔️ Evidence of debugging, testing, and iterative improvement  
+- Completed lab tasks  
+- Python scripts and outputs  
+- Technical explanations  
+- Reflections connecting the work to cybersecurity principles  
+- Evidence of debugging, testing, and iterative improvement  
 
 The aim of this portfolio is to demonstrate a **clear and technically sound understanding** of security fundamentals, including cryptography, network scanning, system hardening, incident analysis, secure communication protocols, penetration testing and generative AI (LLM) pen testing.
 
@@ -22,7 +22,7 @@ This repository follows a weekly logbook structure to show my progression from f
 
 
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 /
