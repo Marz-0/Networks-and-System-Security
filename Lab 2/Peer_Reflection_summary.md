@@ -1,0 +1,5 @@
+# Week 2 Joint Reflection Summary
+
+During our comparison of career paths and skills, we both recognised that while our chosen cybersecurity roles differed slightly, we shared several common development needs, particularly in hands-on security experience and advanced networking knowledge. Discussing our skills gap tables helped us identify practical ways to improve, such as completing free labs on TryHackMe, participating in student tech societies, and building small penetration-testing projects. We also realised that although we lacked industry experience, our academic work provides a strong foundation for further growth.
+
+One key insight from the discussion was how transferable many technical skills are across different cyber roles. Additionally, providing feedback to one another highlighted unique strengths: my partner demonstrated strong analytical thinking, while I contributed detailed planning and organisation. Overall, the reflection helped us understand our readiness more realistically and clarified the steps needed to progress towards our cybersecurity goals.
