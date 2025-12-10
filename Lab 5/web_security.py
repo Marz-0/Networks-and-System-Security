@@ -38,4 +38,3 @@ if report_path:
         print("Open the file in your browser instead:", report_path)
 else:
     print("No HTML report found. Check that the scan produced.")
-    
