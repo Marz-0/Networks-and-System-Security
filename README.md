@@ -270,7 +270,6 @@ This portfolio demonstrates:
 - Professional presentation  
 
 
-
 ## Final Statement
 This portfolio reflects my progression through applied cybersecurity tasks, growing from foundational experiments to more advanced cryptographic, network, and system-level security work. It demonstrates both technical skill and reflective understanding of core security principles.
 
