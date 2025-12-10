@@ -37,6 +37,39 @@ The program:
 
 Although signature‑based detection is limited—especially against polymorphic or obfuscated malware—it remains useful for identifying basic malicious behaviours. This exercise shows how early antivirus engines worked and why modern systems rely on more sophisticated behavioural analysis.
 
+### 2.5 How to use malware detect:
+
+to test the signature-based malware scanner:
+
+Place a file inside the Files/ directory (this is the folder the scanner checks).
+
+You can call this file:
+
+test_malware.py
+
+Add content that contains one of the suspicious patterns into this file, for example:
+
+```bash 
+# test file
+import os
+eval("print('malicious')")
+```
+
+Run the scanner:
+
+python signature_scan.py
+
+
+
+If the scanner finds a matching signature, it prints a warning like:
+
+[SUSPICIOUS] Files/test.py matches pattern: eval(
+
+
+This demonstrates how signature-based antivirus tools detect known malicious patterns in files.
+
+
+
 
 
 ## 3. Worm Propagation Simulation
