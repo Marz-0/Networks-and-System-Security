@@ -261,11 +261,10 @@ Investigating silent drops helped me understand firewall behaviour and TCP retra
 
 ### Wapiti Installation & PATH Issues
 
-One of the main challenges in the week 5 lab was that Wapiti would not run on my system, even after installation. Windows could not recognise the wapiti command due to PATH and script-location conflicts. Instead of blocking my workflow, I adapted by:
-
-    - Investigating where Wapiti installs its executables on Windows
-    - Updating my Python script to allow the use of full executable paths
-    - Adding clear error-handling to inform the user when the tool is not installed
+One of the main challenges in the week 5 lab was that Wapiti would not run on my system, even after installation. Windows could not recognise the wapiti command due to PATH and script-location conflicts. Instead of blocking my workflow, I adapted by: 
+- Investigating where Wapiti installs its executables on Windows
+- Updating my Python script to allow the use of full executable paths
+- Adding clear error-handling to inform the user when the tool is not installed
 
 This helped me understand how security tools interact with the OS environment and highlighted the importance of handling execution failures gracefully.
 
