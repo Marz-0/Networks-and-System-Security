@@ -31,7 +31,7 @@ This repository follows a weekly logbook structure to show my progression from f
 ├── Lab 2/
 │   ├── generate_keys.py
 │   ├── sender_client.py
-│   ├── Server_receiver.py
+│   ├── server_receiver.py
 │   └── Peer_Reflection_summary.md
 │   └── Lab_2_Summary.md
 ├── Lab 3/
@@ -73,8 +73,16 @@ This repository follows a weekly logbook structure to show my progression from f
 │   ├── Whois_domain_lookup.py
 │   └── Lab_7_summary.md
 ├── Lab 9/
-│   ├──
-│   └── reflection.md
+│   ├── Data_poinsoning.py
+│   ├── gemma3.py
+│   ├── LLM_findings.md
+│   ├── LLM_model.py
+│   ├── Model_extraction.py
+│   ├── Model_inversion.py
+│   ├── Prompt_injection.py
+│   ├── qwen7b.py
+│   ├── Part_IV.md
+│   └── Lab_9_summary.md
 ├── package-lock.json
 ├── package.json
 ├── private_key.pem
