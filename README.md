@@ -1,8 +1,13 @@
 # Networks & Systems Security – Portfolio
+
 **Author:** Marzhan Anbia
-**Module:** Networks & Systems Security  
+
+**Module:** Networks & Systems Security 
+
 **Institution:** Goldsmiths, University of London  
+
 **Assessment:** E-Portfolio (30%)  
+
 **Semester:** 2024/2025  
 
 
