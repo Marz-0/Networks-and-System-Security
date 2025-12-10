@@ -60,7 +60,6 @@ Run the scanner:
 python signature_scan.py
 
 
-
 If the scanner finds a matching signature, it prints a warning like:
 
 [SUSPICIOUS] Files/test.py matches pattern: eval(

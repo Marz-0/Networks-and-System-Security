@@ -58,7 +58,6 @@ This repository follows a weekly logbook structure to show my progression from f
 │   ├── file_integrity_check.py
 │   ├── malware_detect.py
 │   ├── Network_monitor.py
-│   ├── SHAalgo.py
 │   ├── Worm_scan.py
 │   └── Lab_4_Summary.md
 ├── Lab 5/
