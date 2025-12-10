@@ -1,4 +1,6 @@
-# Week 7 – Penetration Testing Summary
+# Week 7 pratical summary 
+
+## Penetration Testing 
 
 ## 1. Introduction to Penetration Testing
 This week focused on the foundations of penetration testing (pen testing). This includes its purpose, methodology, and ethical requirements. Pen testing is a controlled security assessment where an authorised tester or a team of testers attempt to identify vulnerabilities before malicious actors do. The idea behind this is to find vulnerabilities before actual malicious hackers do. 
